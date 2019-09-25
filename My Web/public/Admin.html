@@ -1,0 +1,97 @@
+<html>
+<!-------------------------------head --------------------- -->
+<head>
+<title>MISFM DOA</title>
+ <link rel="stylesheet" type="text/css" href="basic.css">
+
+ 
+<!--<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script> --> 
+ <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-firestore.js"></script>
+ <script src="AdminJS.js"></script>
+</head>
+
+<body>
+
+
+<!------------------------------logo and title --------------------- -->
+<div id="head">
+<p><img src="logo-01.png" width="361" height="160">&nbsp;&nbsp;&nbsp;&nbsp; Admin</p>
+</div>
+<div>
+<!------------------------------page navigation breadcrumd --------------------- -->
+<ul class="breadcrumb">
+  <li><strong><a href="index.html">Home</a></strong></li>
+  <li><strong><a href="Knb.html"> Knowledge Bank</a></strong></li>
+  <li><strong><a href="about.html">About</a></strong></li>
+  <li><strong><a href="ConUs.html">Contact Us</a></strong></li>
+  <li><strong><a href="MachineryRent.html">Rent Machinery</a></strong></li>
+  <li><img src="account-512 white.png" width="15px" height="15px">&nbsp;<strong><a href="Login_SignUp.html" >Login/Sing Up</a></strong></li>
+  <li><strong><a href="profile.html"> Profile </a></strong></li>
+  </ul>
+</div>
+
+<!------------------------------Admin Login Form--------------------- -->
+<div  id="LoginForm" class="form-container">
+    <!-- action="/action_page.php"   -->
+      <p id="LoginFormHead">Admin Login</p>
+  
+      <label for="email"><b>NIC No :</b></label>
+      <input type="text" placeholder="NIC" id="ALNIC">&nbsp;&nbsp;&nbsp;
+   
+      <label for="psw"><b>Password :</b></label>
+      <input type="password" placeholder="Enter Password" id="ALpsw">
+  
+      <button class="btn" onclick="AdminLogin()">Login</button>
+      <!-- <button   onclick="openSingUpForm()"><strong>Create an account</strong></button>
+      <button  onclick="closeLoginForm()"><strong>Close</strong></button> -->
+    
+  </div>
+</br></br>
+  <!------------------------------Admin SingUp Form--------------------- -->
+ <div  id="SingUpFormFM"class="SingUpform-container">  <!-- class=" form-popup " -->
+  
+    <p id="LoginFormHead">Create an Admin account</p>
+
+    <label for="name"><b>Name :</b></label>
+    <input type="text" placeholder="Name" id="ASname"  width="200px">
+    <label for="uname"><b>User Name :</b></label>
+    <input type="text" placeholder="User Name" id="ASUname" width="200px"></br>
+    <label for="mobile"><b>Contact Information :</b></label>
+    <input type="text" placeholder="Contact Information" id="ASMNumber"></br>
+    <label for="NIC"><b>National Identity Card No :</b></label>
+    <input type="text" placeholder="NIC" id="ASNIC"></br>
+     <label for="email"><b>Email :</b></label>
+    <input type="text" placeholder="E-mail" id="ASEmail" ></br>
+    <label for="psw"><b>Password :</b></label>
+    <input type="password" placeholder="Enter Password" id="Apsw"></br>
+    <label for="psw"><b>Confirm Password :</b></label>
+    <input type="password" placeholder="Confirm  Password" id="Acpsw"></br>
+    <label for="Govi Jana Sewa Region"><b>Access level :</b></label>
+    <select name="AccLevel" id="AccLevel">
+        <option value="NationalL">National Level</option>
+        <option value="ProvincialL">Provincial Level</option>
+        <option value="DistrictL">District Level</option>
+        <option value="GJSRL">GJSR Level</option>
+
+    </select></br>
+    <label for="Govi Jana Sewa Region"><b>Govi Jana Sewa Region :</b></label>
+    <input type="text" placeholder="Govi Jana Sewa Region" id="ASGJSR" ></br>
+    
+    
+     
+
+    <button onclick="AdminSignUp()"   class="btn"><strong>Sing Up</strong></button><!--"-->
+
+    <!--<button onclick="Show_Farmer()"   class="btn"><strong>Show Farmers</strong></button>"-->
+
+    
+
+   
+   
+   </div>
+
+
+
+</body>
+</html>

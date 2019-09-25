@@ -1,0 +1,510 @@
+@charset "utf-8";
+/* CSS Document */
+/* Style basic Paragraph*/
+p{
+	color: #004b23;
+  font-family:Arial, Helvetica, sans-serif;
+  position:relative;
+  left:100px;
+  
+}
+/* Style the hedding and background */
+#head { 
+color:#004b23; 
+font-family:"Berlin Sans FB"; 
+font-size:30px 
+}
+#head p { 
+position:relative;
+  left:000px; 
+  font-family:"Berlin Sans FB"; 
+}
+body{ 
+background-color:#b8c698;
+}
+
+/* -------------------------------------------------- */
+/* Style the breadcrumb */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color:#969f3c;
+}
+/*  list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color:#FFF;
+  content: "|\00a0";
+}
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color:#FFF;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:14px;
+  text-decoration: none;
+}
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #004b23;
+  text-decoration: underline;
+}
+/*-----------------------------------------------------------*/
+/* Style the imgslider */
+#imgeslider{
+	position:relative;
+  	left:100px;
+	}
+/*-----------------------------------------------------------*/
+/* Style the Knowledge bank Table */
+/*#knbTable{
+	
+	
+	
+	}*/
+#knbTable p {
+    position:relative;
+  left:00px;
+}
+#knbTable p a {
+  color: #004b23;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:14px;
+  text-decoration: none;
+}
+#knbTable p a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+/*-----------------------------------------------------------*/
+/* Style the about & Home para */
+#aboutPara p{
+	width:700px;
+}
+#HomePara p{
+	width:900px;
+}
+/*-----------------------------------------------------------*/
+/* Style Contact us contact form  */
+#ContactForm{
+	color: #004b23;
+  font-family:Arial, Helvetica, sans-serif;
+    position:relative;
+  left:50px;
+  
+}
+/*-----------------------------------------------------------*/
+/* Style login contact form  */
+
+/* The popup form - hidden by default */
+.form-popup {
+  width:relative;
+  height: relative;
+  display:none;
+  position:fixed;
+  padding: 26px 30px 26px 30px;
+  top:300px;
+  left:200px;
+  border: 5px solid #969f3c;
+  background-color:#e0edc3 ;
+  z-index: 9;
+}
+.form-popup .btn {
+  background-color: #4CAF50;
+  color: #004b23;
+  padding: 16px 20px;
+  font-size:16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.7;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 600px;
+  padding: 10px;
+  position:relative;
+  left: 100px;
+  /* white-space: nowrap; */
+  background-color:#e0edc3 ;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password]{
+  width: 30%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+ 
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: #004b23;
+  padding: 16px 20px;
+  font-size:16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.7;
+}
+
+/* Add a red background color to the cancel button 
+.form-container .cancel {
+  background-color: red;
+}*/
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1.2;
+}
+/* Add Font Style to Login Forms */
+#LoginFormHead{
+	color:#004b23; 
+	font-family:"Berlin Sans FB"; 
+  font-size:30px ;
+  margin: 5px 0 5px 0;
+  
+	  position:relative;
+  	left:00px;
+	}
+#LoginForm b{
+	color:#004b23; 
+	font-size:18px; 
+	}
+/*-------------------------------------------------------------------------
+	
+/* Add Font Style to Sign Up Forms */
+/* overide pop up */
+#SingUpForm.form-popup {
+  display:none;
+  position:fixed;
+  top:100px;
+  left:100px;
+  border: 5px solid #969f3c;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.SingUpform-container {
+  max-width: 800px;
+  padding: 10px;
+  position:relative;
+  left: 100px;
+  background-color:#e0edc3 ;
+}
+.SingUpform-container input[type=text], .SingUpform-container input[type=password], SingUpform-container input[type=radio] {
+  /* width: 100%;*/
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  border: none;
+  background: #ffffff;
+}
+
+/* When the inputs get focus, do something */
+.SingUpform-container input[type=text]:focus, .SingUpform-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.SingUpform-container .btn {
+  background-color: #4CAF50;
+  color: #004b23;
+  padding: 16px 20px;
+  font-size:16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.7;
+}
+
+
+/* Add some hover effects to buttons */
+.SingUpform-container .btn:hover, .open-button:hover {
+  opacity: 1.2;
+}
+/* Add Font Style t */
+
+#SingUpFormFM b{
+	color:#004b23; 
+  font-size:18px; 
+   }
+/* Add selector Style */
+#SingUpFormFM select {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 6px 25px;
+    font-size:14px;
+    border: none;
+    margin-bottom:10px;
+    
+  }
+   /*----------------Add style farmer_list------------------- */
+ #farmer_list td,tr{
+  background-color:#e0edc3 ;
+  color: #004b23;
+  padding: 10px;
+  position:relative;
+  left: 00px;
+  
+ }
+/*---add style to profile Form---*/
+#ProfileFM b{
+    color:#004b23; 
+    font-size:14px; 
+  
+  }
+  #ProfileFM button {
+    background-color: #4CAF50;
+    color: #004b23;
+    padding: 8px 25px;
+    font-size:14px;
+    border: none;
+    cursor: pointer;
+    margin-bottom:10px;
+    
+    opacity: 0.7;
+  }
+#ProfileFM button:hover, .open-button:hover {
+    opacity: 1.5;
+  }
+
+  /*---add style to add Farming Machinery Form---*/
+#Add_Farming_Machinery b{
+  color:#004b23; 
+  font-size:14px; 
+}
+#Add_Farming_Machinery p{
+  position:relative;
+  left:50px; 
+  font-family:"Berlin Sans FB"; 
+  color:#004b23; 
+  font-size:25px;
+   
+}
+#Add_Farming_Machinery button {
+  background-color: #4CAF50;
+  color: #004b23;
+  padding: 6px 25px;
+  font-size:14px;
+  border: none;
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.7;
+}
+#Add_Farming_Machinery button:hover, .open-button:hover {
+  opacity: 1.5;
+}
+#Add_Farming_Machinery input[type=text] {
+  /* width: 100%;*/
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  border: none;
+  background: #ffffff;
+}
+
+#Add_Farming_Machinery input[type=text]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+#Add_Farming_Machinery select {
+  background-color: #4CAF50;
+  color: #ffffff;
+  padding: 6px 25px;
+  font-size:14px;
+  border: none;
+  margin-bottom:10px;
+  
+}
+
+ /*----------------Add style Machinery UL in profile------------------- */
+ #Machinery_List td,tr{
+  background-color:#e0edc3 ;
+  color: #004b23;
+  padding: 0px;
+  position: relative;
+  left: -25px;
+  
+ }
+
+ /*----------------Add style Machinery rent popup form------------------- */
+ #Machinery_Rent_FM b{
+  color:#004b23; 
+  font-size:14px; 
+}
+#Machinery_Rent_FM p{
+  position:relative;
+  left:50px; 
+  font-family:"Berlin Sans FB"; 
+  color:#004b23; 
+  font-size:25px;
+   
+}
+#Machinery_Rent_FM button {
+  background-color: #4CAF50;
+  color: #004b23;
+  padding: 6px 25px;
+  font-size:10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.7;
+}
+#Machinery_Rent_FM button:hover, .open-button:hover {
+  opacity: 1.5;
+}
+#Machinery_Rent_FM input[type=text] {
+  /* width: 100%;*/
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  border: none;
+  background: #ffffff;
+}
+
+#Machinery_Rent_FM input[type=text]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+/*----------------Add style Change Password popup form------------------- */
+
+#Change_Password_FM b{
+  color:#004b23; 
+  font-size:14px; 
+}
+#Change_Password_FM p{
+  position:relative;
+  left:50px; 
+  font-family:"Berlin Sans FB"; 
+  color:#004b23; 
+  font-size:25px;
+   
+}
+#Change_Password_FM button {
+  background-color: #4CAF50;
+  color: #004b23;
+  padding: 6px 25px;
+  font-size:10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.7;
+}
+#Change_Password_FM button:hover, .open-button:hover {
+  opacity: 1.5;
+}
+#Change_Password_FM input[type=password] {
+  /* width: 100%;*/
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  border: none;
+  background: #ffffff;
+}
+
+#Change_Password_FM input[type=password]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+ 
+/*----------------Add style Remove Machinery  popup form------------------- */
+#Remove_Machinery_FM b{
+  color:#004b23; 
+  font-size:14px; 
+}
+#Remove_Machinery_FM p{
+  position:relative;
+  left:50px; 
+  font-family:"Berlin Sans FB"; 
+  color:#004b23; 
+  font-size:25px;
+   
+}
+#Remove_Machinery_FM button {
+  background-color: #4CAF50;
+  color: #004b23;
+  padding: 6px 25px;
+  font-size:10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.7;
+}
+#Remove_Machinery_FM button:hover, .open-button:hover {
+  opacity: 1.5;
+}
+#Remove_Machinery_FM input[type=text] {
+  /* width: 100%;*/
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  border: none;
+  background: #ffffff;
+}
+
+#Remove_Machinery_FM input[type=text]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+/*----------------Admin page styles begin here------------------- */
+
+  /*----------------Add style to UL and LI s--------------------
+
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+li{
+  padding: 20px;
+  background: #f6f6f6;
+  font-size: 20px;
+  color: #555;
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+  height: 46px;
+}
+
+li:nth-child(even){
+  padding: 20px;
+  background: #f2f2f2;
+}
+
+li span{
+  display: block;
+}
+
+li span:nth-child(2){
+  font-size: 16px;
+  margin-top: 6px;
+  color: #999;
+}
+
+li div{
+  position: absolute;
+  top: 0;
+  right: 0px;
+  background: rgba(255,255,255,0.6);
+  width: 40px;
+  text-align: center;
+  padding: 10px 0;
+  font-weight:  bold;
+  cursor:  pointer;
+}
+*/
+

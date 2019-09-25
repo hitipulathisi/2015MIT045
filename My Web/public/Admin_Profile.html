@@ -1,0 +1,48 @@
+<html>
+<!-------------------------------head --------------------- -->
+<head>
+<title>MISFM DOA</title>
+ <link rel="stylesheet" type="text/css" href="basic.css">
+
+ 
+<!--<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script> --> 
+ <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-firestore.js"></script>
+ <script src="AdminJS.js"></script>
+ 
+</head>
+
+<body onload="ReturnAdminName(),ShowAccLevel(),ReturnTotalNumberOfMachi(),ReturnTotalNumberOfMachiAVRent()">
+
+
+<!------------------------------logo and title --------------------- -->
+<div id="head">
+<p><img src="logo-01.png" width="361" height="160">&nbsp;&nbsp;&nbsp;&nbsp; Admin Profile</p>
+</div>
+<div>
+<!------------------------------page navigation breadcrumd --------------------- -->
+<ul class="breadcrumb">
+  <li><strong><a href="index.html">Home</a></strong></li>
+  <li><strong><a href="Knb.html"> Knowledge Bank</a></strong></li>
+  <li><strong><a href="about.html">About</a></strong></li>
+  <li><strong><a href="ConUs.html">Contact Us</a></strong></li>
+  <li><strong><a href="MachineryRent.html">Rent Machinery</a></strong></li>
+  <li><img src="account-512 white.png" width="15px" height="15px">&nbsp;<strong><a href="Login_SignUp.html" >Login/Sing Up</a></strong></li>
+  <li><strong><a href="profile.html"> Profile </a></strong></li>
+  </ul>
+</div>
+<div  id="ProfileFM"class="SingUpform-container">
+    <b>Hi,</b>&nbsp;&nbsp;<b id="APP1"></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>You Have "</b><b id="APP2"></b> <b>" Access to Administrate</b></br></br></br>
+    <b> Number of Farming Machineries In Area&nbsp;&nbsp;&nbsp;:</b><b id="APP3"></b></br>
+    <b> Number of Farming Machineries Available for Rent In Area&nbsp;&nbsp;&nbsp;:</b><b id="APP4"></b></br>
+    <button onclick="AShowALL_Machinery()"><b>Show All Machinery</b></button>
+    <button onclick="AShowALL_AMachinery()"><b>Show All Available Machinery</b></button>
+    <ul  id="AMachinery_List"></ul>
+</div>
+
+ 
+
+
+</body>
+</html>

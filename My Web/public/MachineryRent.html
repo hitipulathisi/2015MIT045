@@ -1,0 +1,59 @@
+<html>
+<!-------------------------------head --------------------- -->
+<head>
+<title>MISFM DOA</title>
+ <link rel="stylesheet" type="text/css" href="basic.css">
+
+ 
+<!--<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script> --> 
+ <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-firestore.js"></script>
+ <script src="app.js"></script>
+</head>
+
+<body>
+
+
+<!------------------------------logo and title --------------------- -->
+<div id="head">
+<p><img src="logo-01.png" width="361" height="160">&nbsp;&nbsp;&nbsp;&nbsp;  Rent Machinery</p>
+</div>
+<div>
+<!------------------------------page navigation breadcrumd --------------------- -->
+<ul class="breadcrumb">
+  <li><strong><a href="index.html">Home</a></strong></li>
+  <li><strong><a href="Knb.html"> Knowledge Bank</a></strong></li>
+  <li><strong><a href="about.html">About</a></strong></li>
+  <li><strong><a href="ConUs.html">Contact Us</a></strong></li>
+  <li><strong><a href="MachineryRent.html">Rent Machinery</a></strong></li>
+  <li><img src="account-512 white.png" width="15px" height="15px">&nbsp;<strong><a href="Login_SignUp.html" >Login/Sing Up</a></strong></li>
+  <li><strong><a href="profile.html"> Profile </a></strong></li>
+  </ul>
+</div>
+<!------------------------------Machinery Rent Page --------------------- -->
+<div id="ProfileFM" class="SingUpform-container">
+    <button onclick="ShowALL_Machinery()"><b>Show All Available Machinery</b></button>
+    <button onclick="ShowALL_Machinery_InMyRegion()"><b>Show Machinery in my region</b></button>
+    <button onclick="open_Machinery_R()"><b>Rent Machinery</b></button></br>
+    <ul  id="Machinery_List"></ul>
+
+</div>
+<!------------------------------Machinery Rent Form --------------------- -->
+<div id="Machinery_Rent_FM" class="form-popup">
+    <b>Chassis/Serial Number:</b><input type="text"id="RCSNumber"><button onclick="ReturnOwnNIC()"><b>Find Owner</b></button></br><!----do it right but not exactly as needed --------------------- -->
+    <b>Machinery Owner:</b><input type="text"id="RMNic"></br>
+    <b>Date:</b><input type="text"id="Rdate"><button onclick="Check_Rent_Availability()"><b>Check Availability</b></button></br>
+    <b>Star Time :</b><input type="text"id="RStime"></br>
+    <b>End Time :</b><input type="text"id="REtime"></br>
+    <button onclick="Rent()"><b>Rent</b></button>
+    <button onclick="Reset_Machinery_rent()"><b>Reset</b></button>
+    <button onclick="close_Machinery_R()"><b>Close</b></button>
+    <ul  id="Machinery_List"></ul>
+
+</div>
+
+
+
+
+</body>
+</html>

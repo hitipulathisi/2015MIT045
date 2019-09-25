@@ -1,0 +1,113 @@
+<html>
+<!-------------------------------head --------------------- -->
+<head>
+<title>MISFM DOA</title>
+ <link rel="stylesheet" type="text/css" href="basic.css">
+
+ 
+<!--<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script> --> 
+ <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-firestore.js"></script>
+ <script src="app.js"></script>
+</head>
+
+<body onload="CheckUserLogin(),ReturnID(),RetuenOldPassword()" >
+
+
+<!------------------------------logo and title --------------------- -->
+<div id="head">
+<p><img src="logo-01.png" width="361" height="160">&nbsp;&nbsp;&nbsp;&nbsp; Farmers Profile</p>
+</div>
+<div>
+<!------------------------------page navigation breadcrumd --------------------- -->
+<ul class="breadcrumb">
+  <li><strong><a href="index.html">Home</a></strong></li>
+  <li><strong><a href="Knb.html"> Knowledge Bank</a></strong></li>
+  <li><strong><a href="about.html">About</a></strong></li>
+  <li><strong><a href="ConUs.html">Contact Us</a></strong></li>
+  <li><strong><a href="MachineryRent.html">Rent Machinery</a></strong></li>
+  <li><img src="account-512 white.png" width="15px" height="15px">&nbsp;<strong><a href="Login_SignUp.html" >Login/Sing Up</a></strong></li>
+  <li><strong><a href="profile.html"> Profile </a></strong></li>
+  </ul>
+</div>
+
+<!------------------------------Profile basic data --------------------- -->
+<div id="ProfileFM" class="SingUpform-container" onload="" >
+  <input type="image" width="150px" height="150px">&nbsp;<button>uploade</button></br>
+  <b>Name :</b><input type="text"  id="Pname">&nbsp;&nbsp;<button onclick="EditName()">Save New Name </button></br>
+  <b>User Name :</b><input type="text"  id="Puname">&nbsp;&nbsp;<button onclick="EditUserName()">Save New User Name</button></br>
+  <b>Mobile Number :</b><input type="text" id="PMobile">&nbsp;&nbsp;<button onclick="EditMobile()">Save New Mobile Number</button></br>
+  <b>Email :</b><input type="text" id="PEmail">&nbsp;&nbsp;<button onclick="EditEmail()">Save New Email</button></br>
+  <b>Address :</b></br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea type="text" placeholder="Address" id="PAddress"rows="4" cols="50" ></textarea>&nbsp;&nbsp;<button onclick="EditAddress()">Save New Address</button></br>
+  <b>Govi Jana Sewa Region :</b><input type="text" placeholder="Govi Jana Sewa Region" id="PGJSR" >&nbsp;&nbsp;<button onclick="EditGJSR()">Save New GJSR</button></br>
+  <button onclick="Open_ChanegePassword_FM()"><b>Change Password</b></button> 
+  <button onclick="SignOut()"><b>Sing Out</b></button>
+  <button onclick="openAF_Machinery()"><b>Add Farming Machinery</b></button>
+  <button onclick="Open_Remove_Machinery_FM()"><b>Remove Farming Machinery</b></button></br>
+  <!--
+  &nbsp;&nbsp;&nbsp;&nbsp;<b>CS Number</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Type</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Brand</b>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Width</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Height</b>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Efficiency</b>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Avalability</b></br>
+  -->
+  <ul  id="Machinery_List"></ul>
+   
+</div>
+<!------------------------------Add farming Machinery --------------------- -->
+<div id="Add_Farming_Machinery" class="form-popup">
+  <p>Add Farming Machinery</p>
+  <b>Chassis/Serial Number:</b><input type="text"id="CSNumber"></br>
+  <b>Type                 :</b><select name="Type" id="MType">
+      <option value="Tractor">Tractor</option>
+      <option value="Harvester">Harvester</option>
+      <option value="Cultivator">Cultivator</option>
+      <option value="Plow">Plow</option>
+      <option value="Seeder">Seeder</option>
+    </select></br>
+  <b>Brand                :</b><input type="text"id="MBrand"></br>
+  <b>Model No             :</b><input type="text"id="MModel_No"></br>
+  <b>Width                :</b><input type="text"id="MWidth">&nbsp;&nbsp;<b>in meters(m) </b></br>
+  <b>Height               :</b><input type="text"id="MHeight">&nbsp;&nbsp;<b>in meters(m) </b></br>
+  <b>Average Efficiency   :</b><input type="text"id="MAverage_Eff">&nbsp;&nbsp;<b>acres per day </b></br>
+  <b>Available for Rent                 :</b><select name="Avalability" id="MARent">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      
+    </select></br>
+  <button onclick="Add_Machinery()"><b>Add</b></button>
+  <button onclick="Reset_Machinery()"><b>Reset</b></button>
+  <button onclick="closeAF_Machinery()"><b>Close</b></button>
+  
+</div>
+<!------------------------------display farming Machinery --------------------- -->
+<!------------------------------Change Password --------------------- -->
+<div id="Change_Password_FM" class="form-popup">
+  <p>Change Password</p>
+  <b>Old Password:</b><input type="password"id="OPass"></br>
+  <b>Confirm Old Password:</b><input type="password"id="COPass"></br>
+  <b>New Password:</b><input type="password"id="NPass"></br>
+  <b>Confirm New Password:</b><input type="password"id="CNPass"></br>
+  
+  <button onclick="ChangePassword()"><b>Change</b></button>
+  <button onclick="Close_ChanegePassword_FM()"><b>Close</b></button>
+  
+</div>
+
+<!------------------------------Remove Farming Machinery --------------------- -->
+<div id="Remove_Machinery_FM" class="form-popup">
+  <p>Remove Farming Machinery</p>
+  <b>Chassis/Serial Number:</b><input type="text"id="RCSNumber"><button onclick="ReturnMachineryID()"><b>Find ID</b></button></br>
+  <b>Machinery ID:</b><input type="text"id="RMID"></br>
+  
+  <button onclick="RemoveMachinery()"><b>Remove</b></button>&nbsp;&nbsp;
+  <button onclick="Close_Remove_Machinery_FM()"><b>Close</b></button>
+  
+</div>
+
+
+ 
+
+</body>
+</body>
+</html>
